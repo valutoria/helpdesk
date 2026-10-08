@@ -1,4 +1,4 @@
-import {Component, onWillStart} from "@odoo/owl";
+import {Component, onWillStart, proxy} from "@odoo/owl";
 import {render} from "@web/owl2/utils";
 import {useBus, useService} from "@web/core/utils/hooks";
 import {SIZES} from "@web/core/ui/ui_utils";
@@ -12,8 +12,9 @@ export class HelpdeskDashboard extends Component {
         this.action = useService("action");
         this.uiService = useService("ui");
         useBus(this.uiService.bus, "resize", () => render(this));
+        this.state = proxy({helpdeskData: []});
         onWillStart(async () => {
-            this.helpdeskData = await this.orm.call(
+            this.state.helpdeskData = await this.orm.call(
                 "helpdesk.ticket.team",
                 "retrieve_dashboard"
             );

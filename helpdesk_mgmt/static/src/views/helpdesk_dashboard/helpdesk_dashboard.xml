@@ -7,7 +7,7 @@
                     class="oe_button_box o-form-buttonbox d-print-none d-grid"
                     t-attf-style="grid-template-columns: repeat({{ gridTemplateColumns }}, 1fr);"
                 >
-                    <t t-foreach="helpdeskData" t-as="section" t-key="section_index">
+                    <t t-foreach="state.helpdeskData" t-as="section" t-key="section_index">
                         <ViewButton
                             t-if="section.show"
                             onClick="() => this.action.doAction(section.action)"
