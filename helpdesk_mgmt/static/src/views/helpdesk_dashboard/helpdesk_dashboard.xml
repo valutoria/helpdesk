@@ -5,7 +5,7 @@
             <div class="justify-content-between gap-3 gap-lg-0 o_form_view">
                 <div
                     class="oe_button_box o-form-buttonbox d-print-none d-grid"
-                    t-attf-style="grid-template-columns: repeat({{ state.gridTemplateColumns }}, 1fr);"
+                    t-attf-style="grid-template-columns: repeat({{ gridTemplateColumns }}, 1fr);"
                 >
                     <t t-foreach="helpdeskData" t-as="section" t-key="section_index">
                         <ViewButton
