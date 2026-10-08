@@ -10,7 +10,6 @@ class HelpdeskTicket(models.Model):
     _order = "priority desc, sequence, number desc, id desc"
     _mail_post_access = "read"
     _inherit = [
-        "mail.thread.cc",
         "mail.activity.mixin",
         "portal.mixin",
         "mail.tracking.duration.mixin",
@@ -57,6 +56,36 @@ class HelpdeskTicket(models.Model):
             ] + search_domain
         return stages.search(search_domain)
 
+    def _mail_cc_sanitized_raw_dict(self, cc_string):
+        """Return normalized addresses mapped to their display form."""
+        if not cc_string:
+            return {}
+        return {
+            tools.email_normalize(email): tools.formataddr(
+                (name, tools.email_normalize(email))
+            )
+            for name, email in tools.mail.email_split_tuples(cc_string)
+        }
+
+    @api.model
+    def message_new(self, msg_dict, custom_values=None):
+        custom_values = custom_values or {}
+        values = {
+            "email_cc": ", ".join(
+                self._mail_cc_sanitized_raw_dict(msg_dict.get("cc")).values()
+            )
+        }
+        values.update(custom_values)
+        return super().message_new(msg_dict, values)
+
+    def message_update(self, msg_dict, update_vals=None):
+        update_vals = update_vals or {}
+        new_cc = self._mail_cc_sanitized_raw_dict(msg_dict.get("cc"))
+        if new_cc:
+            new_cc.update(self._mail_cc_sanitized_raw_dict(self.email_cc))
+            update_vals = {**update_vals, "email_cc": ", ".join(new_cc.values())}
+        return super().message_update(msg_dict, update_vals)
+
     @api.depends("duplicate_ids")
     def _compute_duplicate_count(self):
         for record in self:
@@ -64,6 +93,7 @@ class HelpdeskTicket(models.Model):
 
     number = fields.Char(string="Ticket number", default="/", readonly=True)
     name = fields.Char(string="Title", required=True)
+    email_cc = fields.Char(string="Email cc")
     description = fields.Html(required=True, sanitize_style=True)
     user_id = fields.Many2one(
         comodel_name="res.users",

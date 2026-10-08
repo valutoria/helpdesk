@@ -64,4 +64,4 @@ class HelpdeskTicketCreateLead(models.TransientModel):
             )
         )
         self.ticket_id.with_user(SUPERUSER_ID).message_post(body=body)
-        return lead.get_formview_action()
+        return lead._get_records_action()

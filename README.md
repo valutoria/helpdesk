@@ -2,11 +2,11 @@
 [![Support the OCA](https://odoo-community.org/readme-banner-image)](https://odoo-community.org/get-involved?utm_source=repo-readme)
 
 # helpdesk
-[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/helpdesk&target_branch=19.0)
-[![Pre-commit Status](https://github.com/OCA/helpdesk/actions/workflows/pre-commit.yml/badge.svg?branch=19.0)](https://github.com/OCA/helpdesk/actions/workflows/pre-commit.yml?query=branch%3A19.0)
-[![Build Status](https://github.com/OCA/helpdesk/actions/workflows/test.yml/badge.svg?branch=19.0)](https://github.com/OCA/helpdesk/actions/workflows/test.yml?query=branch%3A19.0)
-[![codecov](https://codecov.io/gh/OCA/helpdesk/branch/19.0/graph/badge.svg)](https://codecov.io/gh/OCA/helpdesk)
-[![Translation Status](https://translation.odoo-community.org/widgets/helpdesk-19-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/helpdesk-19-0/?utm_source=widget)
+[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/helpdesk&target_branch=20.0)
+[![Pre-commit Status](https://github.com/OCA/helpdesk/actions/workflows/pre-commit.yml/badge.svg?branch=20.0)](https://github.com/OCA/helpdesk/actions/workflows/pre-commit.yml?query=branch%3A20.0)
+[![Build Status](https://github.com/OCA/helpdesk/actions/workflows/test.yml/badge.svg?branch=20.0)](https://github.com/OCA/helpdesk/actions/workflows/test.yml?query=branch%3A20.0)
+[![codecov](https://codecov.io/gh/OCA/helpdesk/branch/20.0/graph/badge.svg)](https://codecov.io/gh/OCA/helpdesk)
+[![Translation Status](https://translation.odoo-community.org/widgets/helpdesk-20-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/helpdesk-20-0/?utm_source=widget)
 
 <!-- /!\ do not modify above this line -->
 
@@ -22,21 +22,21 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[helpdesk_mgmt](helpdesk_mgmt/) | 19.0.1.2.0 |  | Helpdesk
-[helpdesk_mgmt_activity](helpdesk_mgmt_activity/) | 19.0.1.0.0 |  | Create Activities for Odoo records from the Helpdesk
-[helpdesk_mgmt_crm](helpdesk_mgmt_crm/) | 19.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Links helpdesk tickets with leads
-[helpdesk_mgmt_fieldservice](helpdesk_mgmt_fieldservice/) | 19.0.1.0.0 |  | Create service orders from a ticket
-[helpdesk_mgmt_project](helpdesk_mgmt_project/) | 19.0.1.0.0 |  | Add the option to select project in the tickets.
-[helpdesk_mgmt_rating](helpdesk_mgmt_rating/) | 19.0.1.0.0 |  | This module allows customer to rate the assistance received on a ticket.
-[helpdesk_mgmt_sale](helpdesk_mgmt_sale/) | 19.0.1.0.0 |  | Add the option to select project in the sale orders.
-[helpdesk_mgmt_sla](helpdesk_mgmt_sla/) | 19.0.1.0.0 |  | Add SLA to the tickets for Helpdesk Management.
-[helpdesk_mgmtsystem_nonconformity](helpdesk_mgmtsystem_nonconformity/) | 19.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Links helpdesk tickets with nonconformities
-[helpdesk_portal_priority](helpdesk_portal_priority/) | 19.0.1.0.0 | <a href='https://github.com/lbarry-apsl'><img src='https://github.com/lbarry-apsl.png' width='32' height='32' style='border-radius:50%;' alt='lbarry-apsl'/></a> | Helpdesk Portal Priority
-[helpdesk_product](helpdesk_product/) | 19.0.1.1.0 |  | Add the option to select product in the tickets.
-[helpdesk_ticket_close_inactive](helpdesk_ticket_close_inactive/) | 19.0.1.0.1 | <a href='https://github.com/miquelalzanillas'><img src='https://github.com/miquelalzanillas.png' width='32' height='32' style='border-radius:50%;' alt='miquelalzanillas'/></a> | Helpdesk Ticket Close Inactive
-[helpdesk_ticket_partner_response](helpdesk_ticket_partner_response/) | 19.0.1.3.0 | <a href='https://github.com/peluko00'><img src='https://github.com/peluko00.png' width='32' height='32' style='border-radius:50%;' alt='peluko00'/></a> | Change ticket stage when partner response
-[helpdesk_ticket_related](helpdesk_ticket_related/) | 19.0.1.0.0 | <a href='https://github.com/peluko00'><img src='https://github.com/peluko00.png' width='32' height='32' style='border-radius:50%;' alt='peluko00'/></a> | Link tickets to each other
-[helpdesk_type](helpdesk_type/) | 19.0.1.0.0 | <a href='https://github.com/nelsonramirezs'><img src='https://github.com/nelsonramirezs.png' width='32' height='32' style='border-radius:50%;' alt='nelsonramirezs'/></a> <a href='https://github.com/max3903'><img src='https://github.com/max3903.png' width='32' height='32' style='border-radius:50%;' alt='max3903'/></a> | Add a type to your tickets
+[helpdesk_mgmt](helpdesk_mgmt/) | 20.0.1.3.0 |  | Helpdesk
+[helpdesk_mgmt_activity](helpdesk_mgmt_activity/) | 20.0.1.1.0 |  | Create Activities for Odoo records from the Helpdesk
+[helpdesk_mgmt_crm](helpdesk_mgmt_crm/) | 20.0.1.1.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Links helpdesk tickets with leads
+[helpdesk_mgmt_fieldservice](helpdesk_mgmt_fieldservice/) | 20.0.1.0.0 |  | Create service orders from a ticket
+[helpdesk_mgmt_project](helpdesk_mgmt_project/) | 20.0.1.0.0 |  | Add the option to select project in the tickets.
+[helpdesk_mgmt_rating](helpdesk_mgmt_rating/) | 20.0.1.0.0 |  | This module allows customer to rate the assistance received on a ticket.
+[helpdesk_mgmt_sale](helpdesk_mgmt_sale/) | 20.0.1.1.0 |  | Add the option to select project in the sale orders.
+[helpdesk_mgmt_sla](helpdesk_mgmt_sla/) | 20.0.1.0.0 |  | Add SLA to the tickets for Helpdesk Management.
+[helpdesk_mgmtsystem_nonconformity](helpdesk_mgmtsystem_nonconformity/) | 20.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Links helpdesk tickets with nonconformities
+[helpdesk_portal_priority](helpdesk_portal_priority/) | 20.0.1.0.0 | <a href='https://github.com/lbarry-apsl'><img src='https://github.com/lbarry-apsl.png' width='32' height='32' style='border-radius:50%;' alt='lbarry-apsl'/></a> | Helpdesk Portal Priority
+[helpdesk_product](helpdesk_product/) | 20.0.1.1.0 |  | Add the option to select product in the tickets.
+[helpdesk_ticket_close_inactive](helpdesk_ticket_close_inactive/) | 20.0.1.0.2 | <a href='https://github.com/miquelalzanillas'><img src='https://github.com/miquelalzanillas.png' width='32' height='32' style='border-radius:50%;' alt='miquelalzanillas'/></a> | Helpdesk Ticket Close Inactive
+[helpdesk_ticket_partner_response](helpdesk_ticket_partner_response/) | 20.0.1.3.0 | <a href='https://github.com/peluko00'><img src='https://github.com/peluko00.png' width='32' height='32' style='border-radius:50%;' alt='peluko00'/></a> | Change ticket stage when partner response
+[helpdesk_ticket_related](helpdesk_ticket_related/) | 20.0.1.0.0 | <a href='https://github.com/peluko00'><img src='https://github.com/peluko00.png' width='32' height='32' style='border-radius:50%;' alt='peluko00'/></a> | Link tickets to each other
+[helpdesk_type](helpdesk_type/) | 20.0.1.1.0 | <a href='https://github.com/nelsonramirezs'><img src='https://github.com/nelsonramirezs.png' width='32' height='32' style='border-radius:50%;' alt='nelsonramirezs'/></a> <a href='https://github.com/max3903'><img src='https://github.com/max3903.png' width='32' height='32' style='border-radius:50%;' alt='max3903'/></a> | Add a type to your tickets
 
 [//]: # (end addons)
 

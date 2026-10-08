@@ -9,9 +9,7 @@ from odoo.addons.web.tests.test_js import WebSuite
 class TestHelpdesMgmtJs(WebSuite):
     """Test Automation OCA"""
 
-    def get_hoot_filters(self):
+    @odoo.tests.no_retry
+    def test_unit_desktop(self, modules):
         self._test_params = [("+", "@helpdesk_mgmt")]
-        return super().get_hoot_filters()
-
-    def test_helpdesk_mgmt(self):
-        self.test_unit_desktop()
+        return super().test_unit_desktop(modules)

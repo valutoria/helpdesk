@@ -1,10 +1,17 @@
 # Copyright 2023 Tecnativa - Víctor Martínez
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 # import odoo.tests
-from odoo import http
 from odoo.tests.common import new_test_user, tagged
 
-from odoo.addons.base.tests.common import DISABLED_MAIL_CONTEXT, HttpCaseWithUserPortal
+from odoo.addons.base.tests.common import HttpCaseWithUserPortal
+
+DISABLED_MAIL_CONTEXT = {
+    "tracking_disable": True,
+    "mail_create_nolog": True,
+    "mail_create_nosubscribe": True,
+    "mail_notrack": True,
+    "no_reset_password": True,
+}
 
 
 @tagged("post_install", "-at_install")
@@ -59,7 +66,7 @@ class TestHelpdeskPortalBase(HttpCaseWithUserPortal):
     def _submit_ticket(self, **values):
         data = {
             "category": self.portal_category.id,
-            "csrf_token": http.Request.csrf_token(self),
+            "csrf_token": self.csrf_token(),
             "subject": self.new_ticket_title,
             "description": "\n".join(self.new_ticket_desc_lines),
         }
@@ -218,7 +225,7 @@ class TestHelpdeskPortal(TestHelpdeskPortalBase):
         resp = self.url_open(
             "/ticket/close",
             data={
-                "csrf_token": http.Request.csrf_token(self),
+                "csrf_token": self.csrf_token(),
                 "stage_id": stage.id,
                 "ticket_id": ticket.id,
             },

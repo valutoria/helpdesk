@@ -1,25 +1,25 @@
 [project]
 name = "odoo-addons-oca-helpdesk"
-version = "19.0.20260911.0"
+version = "20.0.20260911.0"
 dependencies = [
-    "odoo-addon-helpdesk_mgmt==19.0.*",
-    "odoo-addon-helpdesk_mgmt_activity==19.0.*",
-    "odoo-addon-helpdesk_mgmt_crm==19.0.*",
-    "odoo-addon-helpdesk_mgmt_fieldservice==19.0.*",
-    "odoo-addon-helpdesk_mgmt_project==19.0.*",
-    "odoo-addon-helpdesk_mgmt_rating==19.0.*",
-    "odoo-addon-helpdesk_mgmt_sale==19.0.*",
-    "odoo-addon-helpdesk_mgmt_sla==19.0.*",
-    "odoo-addon-helpdesk_mgmtsystem_nonconformity==19.0.*",
-    "odoo-addon-helpdesk_portal_priority==19.0.*",
-    "odoo-addon-helpdesk_product==19.0.*",
-    "odoo-addon-helpdesk_ticket_close_inactive==19.0.*",
-    "odoo-addon-helpdesk_ticket_partner_response==19.0.*",
-    "odoo-addon-helpdesk_ticket_related==19.0.*",
-    "odoo-addon-helpdesk_type==19.0.*",
+    "odoo-addon-helpdesk_mgmt==20.0.*",
+    "odoo-addon-helpdesk_mgmt_activity==20.0.*",
+    "odoo-addon-helpdesk_mgmt_crm==20.0.*",
+    "odoo-addon-helpdesk_mgmt_fieldservice==20.0.*",
+    "odoo-addon-helpdesk_mgmt_project==20.0.*",
+    "odoo-addon-helpdesk_mgmt_rating==20.0.*",
+    "odoo-addon-helpdesk_mgmt_sale==20.0.*",
+    "odoo-addon-helpdesk_mgmt_sla==20.0.*",
+    "odoo-addon-helpdesk_mgmtsystem_nonconformity==20.0.*",
+    "odoo-addon-helpdesk_portal_priority==20.0.*",
+    "odoo-addon-helpdesk_product==20.0.*",
+    "odoo-addon-helpdesk_ticket_close_inactive==20.0.*",
+    "odoo-addon-helpdesk_ticket_partner_response==20.0.*",
+    "odoo-addon-helpdesk_ticket_related==20.0.*",
+    "odoo-addon-helpdesk_type==20.0.*",
 ]
 classifiers=[
     "Programming Language :: Python",
     "Framework :: Odoo",
-    "Framework :: Odoo :: 19.0",
+    "Framework :: Odoo :: 20.0",
 ]

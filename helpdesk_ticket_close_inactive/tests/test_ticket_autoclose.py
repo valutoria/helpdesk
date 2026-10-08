@@ -5,6 +5,8 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestHelpdeskTicketAutoclose(BaseCommon):
+    _test_user_groups = ()
+
     @classmethod
     def setUpClass(self):
         super().setUpClass()
@@ -143,3 +145,43 @@ class TestHelpdeskTicketAutoclose(BaseCommon):
             "Ticket without a category should also be closed "
             "when no category filter is set.",
         )
+
+    def test_closing_processes_every_selected_team(self):
+        second_stage = self.env["helpdesk.ticket.stage"].create(
+            {"name": "Second Team Stage"}
+        )
+        second_closing_stage = self.env["helpdesk.ticket.stage"].create(
+            {"name": "Second Team Closing Stage"}
+        )
+        second_team = self.env["helpdesk.ticket.team"].create(
+            {
+                "name": "Second Test Team",
+                "close_inactive_tickets": True,
+                "inactive_tickets_day_limit_warning": 0,
+                "inactive_tickets_day_limit_closing": 14,
+                "ticket_stage_ids": [(4, second_stage.id)],
+                "closing_ticket_stage": second_closing_stage.id,
+                "close_inactive_mail_template_id": False,
+            }
+        )
+        second_ticket = self.env["helpdesk.ticket"].create(
+            {
+                "name": "Second Team Ticket",
+                "team_id": second_team.id,
+                "stage_id": second_stage.id,
+                "description": "Please help me",
+                "last_stage_update": datetime.today() - timedelta(days=15),
+            }
+        )
+        self.team.write(
+            {
+                "inactive_tickets_day_limit_warning": 0,
+                "close_inactive_mail_template_id": False,
+            }
+        )
+        self.ticket.write({"last_stage_update": datetime.today() - timedelta(days=15)})
+
+        (self.team | second_team).close_team_inactive_tickets()
+
+        self.assertEqual(self.ticket.stage_id, self.stage_closing)
+        self.assertEqual(second_ticket.stage_id, second_closing_stage)

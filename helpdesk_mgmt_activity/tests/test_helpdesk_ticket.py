@@ -15,8 +15,9 @@ class TestHelpdeskTicket(TestHelpdeskTicketBase):
         cls.partner_model = cls.env["ir.model"]._get("res.partner")
         cls.test_partner = cls.env["res.partner"].create({"name": "Test Partner"})
         cls.activity_type_meeting = cls.env.ref("mail.mail_activity_data_meeting")
-        cls.env["ir.config_parameter"].sudo().set_param(
-            "helpdesk_mgmt_activity.helpdesk_available_model_ids", cls.partner_model.ids
+        cls.env["ir.config_parameter"].sudo().set_str(
+            "helpdesk_mgmt_activity.helpdesk_available_model_ids",
+            str(cls.partner_model.ids),
         )
 
         # Stages
@@ -91,13 +92,19 @@ class TestHelpdeskTicket(TestHelpdeskTicketBase):
         self.assertEqual(
             values.get("helpdesk_available_model_ids"), self.partner_model.ids
         )
-        self.env["ir.config_parameter"].sudo().set_param(
+        self.env["ir.config_parameter"].sudo().set_str(
             "helpdesk_mgmt_activity.helpdesk_available_model_ids", False
         )
         values = settings.get_values()
         self.assertFalse(
             values.get("helpdesk_available_model_ids"), "Available models must be False"
         )
+
+    def test_ticket_selection_record_ref_uses_model_access(self):
+        selection = self.env["helpdesk.ticket"].with_user(
+            self.user_own
+        )._selection_record_ref()
+        self.assertIn("res.partner", [model for model, _label in selection])
 
     def test_ticket_record_ref(self):
         """Test flow when change source record"""

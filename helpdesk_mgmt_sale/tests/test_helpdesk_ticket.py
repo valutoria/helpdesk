@@ -6,6 +6,8 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestHelpdeskTicketSale(BaseCommon):
+    _test_user_groups = ()
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -50,5 +52,5 @@ class TestHelpdeskTicketSale(BaseCommon):
         action = self.ticket.action_view_sale_orders()
         self.assertEqual(action["domain"], [("ticket_ids", "in", [self.ticket.id])])
         self.assertEqual(
-            action["context"]["default_ticket_ids"], [Command.link([self.ticket.id])]
+            action["context"]["default_ticket_ids"], [Command.link(self.ticket.id)]
         )

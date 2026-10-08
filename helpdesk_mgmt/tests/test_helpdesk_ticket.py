@@ -137,8 +137,10 @@ class TestHelpdeskTicket(TestHelpdeskTicketBase):
         except Exception as error:
             self.fail(f"{type(error)}: {error}")
         self.assertEqual(t.name, title, "The ticket should have the correct title.")
+        self.assertEqual(t.email_cc, "sally@example.com")
 
         title = "New title"
+        msg_dict["cc"] = "sally@example.com, jane@example.com"
         update_vals = {"name": title}
         try:
             t.message_update(msg_dict, update_vals)
@@ -147,6 +149,7 @@ class TestHelpdeskTicket(TestHelpdeskTicketBase):
         self.assertEqual(
             t.name, title, "The ticket should have the correct (new) title."
         )
+        self.assertEqual(t.email_cc, "sally@example.com, jane@example.com")
 
     def test_ticket_with_team_stage(self):
         self.new_stage.team_ids = [(6, 0, [self.team_a.id, self.team_b.id])]
