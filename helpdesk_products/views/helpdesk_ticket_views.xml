@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Ticket form: products limited to the linked sale orders -->
+    <record id="ticket_view_form_products" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.products</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sale_order_ids']" position="after">
+                <field name="so_product_ids" invisible="1" />
+                <field
+                    name="product_ids"
+                    widget="many2many_tags"
+                    domain="[('id', 'in', so_product_ids)]"
+                    options="{'no_create': True}"
+                    groups="sales_team.group_sale_salesman"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Ticket list: products column -->
+    <record id="ticket_view_tree_products" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.list.products</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_tree" />
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="product_ids" widget="many2many_tags" optional="show" />
+            </field>
+        </field>
+    </record>
+
+    <!-- Ticket search: by product, with-products filter, group by products -->
+    <record id="helpdesk_ticket_view_search_products" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.search.products</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.helpdesk_ticket_view_search" />
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="product_ids" />
+            </field>
+            <xpath expr="//search" position="inside">
+                <filter
+                    string="With Products"
+                    name="filter_with_products"
+                    domain="[('product_ids', '!=', False)]"
+                />
+                <filter
+                    string="Products"
+                    name="group_by_products"
+                    domain="[]"
+                    context="{'group_by': 'product_ids'}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

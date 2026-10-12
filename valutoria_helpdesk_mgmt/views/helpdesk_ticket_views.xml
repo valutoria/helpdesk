@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Restrict selectable sale orders to the ticket partner (all orders when
+         no partner is set, so a sale order can be entered first and fill it) -->
+    <record id="ticket_view_form_partner_domain" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.partner.so.domain</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sale_order_ids']" position="attributes">
+                <attribute name="domain">[('company_id', '=', company_id), ('partner_id', '=', partner_id)] if partner_id else [('company_id', '=', company_id)]</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

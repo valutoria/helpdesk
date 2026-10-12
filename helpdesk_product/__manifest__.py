@@ -11,4 +11,5 @@
     "demo": ["demo/helpdesk_product_demo.xml"],
     "development_status": "Beta",
     "auto_install": True,
+    "installable": False,
 }
