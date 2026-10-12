@@ -7,7 +7,6 @@
         <field name="inherit_id" ref="helpdesk_mgmt.ticket_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='sale_order_ids']" position="after">
-                <field name="so_product_ids" invisible="1" />
                 <field
                     name="product_ids"
                     widget="many2many_tags"
