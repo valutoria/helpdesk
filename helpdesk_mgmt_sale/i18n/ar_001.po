@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-16 00:00+0000\n"
+"PO-Revision-Date: 2026-10-16 00:00+0000\n"
+"Last-Translator: Valutoria\n"
+"Language-Team: Arabic\n"
+"Language: ar_001\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+
+
+#. module: helpdesk_mgmt_sale
+#: model:ir.model.fields,field_description:helpdesk_mgmt_sale.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:helpdesk_mgmt_sale.field_sale_order__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: helpdesk_mgmt_sale
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt_sale.view_order_form
+msgid "Helpdesk"
+msgstr "الدعم"
+
+#. module: helpdesk_mgmt_sale
+#: model:ir.model,name:helpdesk_mgmt_sale.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "تذكرة الدعم"
+
+#. module: helpdesk_mgmt_sale
+#: model:ir.model.fields,field_description:helpdesk_mgmt_sale.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:helpdesk_mgmt_sale.field_sale_order__id
+msgid "ID"
+msgstr "المعرّف"
+
+#. module: helpdesk_mgmt_sale
+#: model:ir.model.fields,field_description:helpdesk_mgmt_sale.field_helpdesk_ticket__so_count
+msgid "Sale Order Count"
+msgstr "عدد أوامر البيع"
+
+#. module: helpdesk_mgmt_sale
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt_sale.ticket_view_form
+msgid "Sale Orders"
+msgstr "أوامر البيع"
+
+#. module: helpdesk_mgmt_sale
+#: model:ir.model,name:helpdesk_mgmt_sale.model_sale_order
+msgid "Sales Order"
+msgstr "أمر بيع"
+
+#. module: helpdesk_mgmt_sale
+#: model:ir.model.fields,field_description:helpdesk_mgmt_sale.field_helpdesk_ticket__sale_order_ids
+msgid "Sales orders"
+msgstr "أوامر البيع"
+
+#. module: helpdesk_mgmt_sale
+#: model:ir.model.fields,field_description:helpdesk_mgmt_sale.field_sale_order__ticket_ids
+msgid "Ticket"
+msgstr "التذكرة"
+
+#. module: helpdesk_mgmt_sale
+#: model:ir.actions.act_window,name:helpdesk_mgmt_sale.action_helpdesk_ticket
+#: model_terms:ir.ui.view,arch_db:helpdesk_mgmt_sale.view_order_form
+msgid "Tickets"
+msgstr "التذاكر"
+
+#. module: helpdesk_mgmt_sale
+#: model:ir.model.fields,field_description:helpdesk_mgmt_sale.field_sale_order__ticket_count
+msgid "Tickets Count"
+msgstr "عدد التذاكر"
+
+#. module: helpdesk_mgmt_sale
+#: model:ir.module.module,shortdesc:helpdesk_mgmt_sale
+msgid "Helpdesk Sale Order"
+msgstr "أمر بيع الدعم"
+
+#. module: helpdesk_mgmt_sale
+#: model:ir.module.module,summary:helpdesk_mgmt_sale
+msgid "Add the option to select project in the sale orders."
+msgstr "إضافة خيار اختيار المشروع في أوامر البيع."
