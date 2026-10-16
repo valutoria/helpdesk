@@ -69,14 +69,12 @@
                                     <div class="col-6 o_kanban_primary_right">
                                         <div class="row">
                                             <div class="col-9">
+                                                <i class="oi me-1" data-icon="person_off" />
                                                 <a
                                                     name="%(action_helpdesk_ticket_kanban_from_dashboard)d"
                                                     type="action"
                                                     context="{'search_default_unassigned': 1}"
-                                                >
-                                                    <i class="oi me-1" data-icon="person_off" />
-                                                    Unassigned
-                                                </a>
+                                                >Unassigned</a>
                                             </div>
                                             <div class="col-3">
                                                 <t
@@ -84,14 +82,12 @@
                                                 />
                                             </div>
                                             <div class="col-9">
+                                                <i class="oi me-1" data-icon="schedule" />
                                                 <a
                                                     name="%(action_helpdesk_ticket_kanban_from_dashboard)d"
                                                     type="action"
                                                     context="{'search_default_unattended': 1}"
-                                                >
-                                                    <i class="oi me-1" data-icon="schedule" />
-                                                    Unattended
-                                                </a>
+                                                >Unattended</a>
                                             </div>
                                             <div class="col-3">
                                                 <t
@@ -99,14 +95,12 @@
                                                 />
                                             </div>
                                             <div class="col-9">
+                                                <i class="oi me-1" data-icon="priority_high" />
                                                 <a
                                                     name="%(action_helpdesk_ticket_kanban_from_dashboard)d"
                                                     type="action"
                                                     context="{'search_default_high_priority': 1}"
-                                                >
-                                                    <i class="oi me-1" data-icon="priority_high" />
-                                                    High Priority
-                                                </a>
+                                                >High Priority</a>
                                             </div>
                                             <div class="col-3">
                                                 <t
