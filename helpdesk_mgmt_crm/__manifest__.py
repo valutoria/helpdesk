@@ -3,7 +3,7 @@
 {
     "name": "Link between Helpdesk and CRM",
     "summary": "Links helpdesk tickets with leads",
-    "version": "20.0.1.2.0",
+    "version": "20.0.1.3.0",
     "category": "After-Sales",
     "website": "https://github.com/OCA/helpdesk",
     "author": "Tecnativa, Odoo Community Association (OCA)",

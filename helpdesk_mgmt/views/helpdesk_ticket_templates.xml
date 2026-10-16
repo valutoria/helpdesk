@@ -30,7 +30,7 @@
                 type="action"
                 t-att-class="'btn btn-primary ' + (_btn_classes or '')"
             >
-                <i class="fa fa-plus" /> New</button>
+                <i class="oi me-1" data-icon="add" /> New</button>
         </form>
     </template>
     <template

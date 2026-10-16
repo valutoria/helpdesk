@@ -61,6 +61,7 @@
                                             type="action"
                                             context="{'search_default_open': 1}"
                                         >
+                                            <i class="oi me-1" data-icon="assignment" />
                                             <t t-out="record.todo_ticket_count.value" />
                                             To Do
                                         </button>
@@ -73,6 +74,7 @@
                                                     type="action"
                                                     context="{'search_default_unassigned': 1}"
                                                 >
+                                                    <i class="oi me-1" data-icon="person_off" />
                                                     Unassigned
                                                 </a>
                                             </div>
@@ -87,6 +89,7 @@
                                                     type="action"
                                                     context="{'search_default_unattended': 1}"
                                                 >
+                                                    <i class="oi me-1" data-icon="schedule" />
                                                     Unattended
                                                 </a>
                                             </div>
@@ -101,6 +104,7 @@
                                                     type="action"
                                                     context="{'search_default_high_priority': 1}"
                                                 >
+                                                    <i class="oi me-1" data-icon="priority_high" />
                                                     High Priority
                                                 </a>
                                             </div>

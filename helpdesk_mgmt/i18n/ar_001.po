@@ -25,8 +25,8 @@ msgstr "<em class=\"font-weight-normal text-muted\">التذاكر ضمن الم
 
 #. module: helpdesk_mgmt
 #: model_terms:ir.ui.view,arch_db:helpdesk_mgmt.portal_ticket_new_button
-msgid "<i class=\"fa fa-plus\"/> New"
-msgstr "<i class=\"fa fa-plus\"/> جديد"
+msgid "<i class=\"oi me-1\" data-icon=\"add\" /> New"
+msgstr "<i class=\"oi me-1\" data-icon=\"add\" /> جديد"
 
 #. module: helpdesk_mgmt
 #: model:mail.template,body_html:helpdesk_mgmt.changed_stage_template
