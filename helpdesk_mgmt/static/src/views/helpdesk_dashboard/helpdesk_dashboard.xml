@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates>
     <t t-name="helpdesk_mgmt.HelpdeskDashboard">
-        <div class="o_helpdesk_team_dashboard container-fluid border-bottom bg-view">
+        <div class="o_helpdesk_team_dashboard container-fluid bg-view">
             <div class="justify-content-between gap-3 gap-lg-0 o_form_view">
                 <div
                     class="oe_button_box o-form-buttonbox d-print-none d-grid"
